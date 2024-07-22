@@ -3,11 +3,11 @@ import {
   HttpRouter,
   HttpServer,
 } from "@effect/platform";
-import {NodeHttpServer, NodeRuntime} from "@effect/platform-node";
+import { NodeHttpServer, NodeRuntime } from "@effect/platform-node";
 
-import {Layer} from "effect";
-import {createServer} from "node:http";
-import {AllRoutes} from "./router";
+import { Layer } from "effect";
+import { createServer } from "node:http";
+import { AllRoutes } from "./router";
 
 const ServerLive = NodeHttpServer.layer(() => createServer(), {port: 3000})
 
